@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 import useCarousel from "../../../hooks/useCarousel";
 
 const Carousel = ({ images = [] }) => {
-  const { leftSlide, curSlide, rightSlide } = useCarousel(images, 3000);
+  const { leftSlide, curSlide, rightSlide } = useCarousel(images, 4000);
 
   return (
-    <div className="w-full aspect-[16/7] relative overflow-hidden">
+    <div className="w-full aspect-[16/7] relative overflow-hidden z-10">
       {images.map((image) => {
         return (
           <div

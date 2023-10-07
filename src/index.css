@@ -5,3 +5,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom styles */
+.active {
+  @apply text-primary;
+}
