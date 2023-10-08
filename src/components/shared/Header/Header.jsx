@@ -7,7 +7,7 @@ import { navigationOptions } from "./../../../data/navigationOptions";
 
 const Header = () => {
   return (
-    <header className="bg-[#eee]">
+    <header className="bg-[#eee] sticky top-0 left-0 z-50 shadow-md">
       <InnerContainer>
         <Navbar companyName={"EArena"} navigationOptions={navigationOptions} />
       </InnerContainer>
