@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Video = ({ videoSource }) => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full aspect-video md:aspect-[16/6]">
       <video
         className="w-full h-full object-cover"
         muted
@@ -11,7 +11,6 @@ const Video = ({ videoSource }) => {
         loop
         src={videoSource}
       ></video>
-      <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-r from-[#000000] to-[#00000000]"></div>
     </div>
   );
 };
