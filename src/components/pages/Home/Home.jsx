@@ -10,9 +10,13 @@ import SectionHeading from "./../../shared/SectionHeading/SectionHeading";
 import Services from "./../../shared/Services/Services";
 import Video from "../../shared/Video/Video";
 import ClipDesign from "./../../shared/ClipDesign/ClipDesign";
+import FeaturedIn from "../../shared/FeaturedIn/FeaturedIn";
 
 // video data import
 import upcomingVideo from "./../../../assets/video/upcoming.mp4";
+
+// featured data import
+import { featuredData } from "../../../data/featuredInData";
 
 const Home = () => {
   // loaded data from loader
@@ -36,17 +40,24 @@ const Home = () => {
     </>
   );
 
+  // service section heading
+  const featuredSectionHeading = (
+    <>
+      <span className="text-primary">Featured</span> In
+    </>
+  );
+
   return (
     <div>
       {/* banner section */}
-      <section className="mb-sectionLg">
+      <section className="mb-sectionGapLg">
         <OuterContainer>
           <Banner />
         </OuterContainer>
       </section>
 
       {/* services section */}
-      <section id="our-services" className="scroll-m-[10rem] mb-sectionLg">
+      <section id="our-services" className="scroll-m-[10rem] mb-sectionGapLg">
         <InnerContainer>
           <SectionHeading
             modifyClasses="mb-elementGapSm"
@@ -61,7 +72,7 @@ const Home = () => {
       </section>
 
       {/* upcoming events section */}
-      <section className="mb-sectionLg">
+      <section className="mb-sectionGapLg">
         <OuterContainer>
           <SectionHeading
             modifyClasses="mb-elementGapSm md:mb-0"
@@ -75,6 +86,17 @@ const Home = () => {
             <ClipDesign modifyClasses="hidden md:block" />
           </div>
         </OuterContainer>
+      </section>
+
+      {/* featured in  */}
+      <section className="mb-sectionGapLg">
+        <SectionHeading
+          modifyClasses="mb-elementGapMd"
+          text={featuredSectionHeading}
+        />
+        <InnerContainer>
+          <FeaturedIn logos={featuredData} />
+        </InnerContainer>
       </section>
     </div>
   );

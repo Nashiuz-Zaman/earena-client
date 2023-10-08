@@ -8,7 +8,7 @@ export default {
         xsm: "480px",
       },
       margin: {
-        sectionLg: "9rem",
+        sectionGapLg: "9rem",
         elementGapSm: "1.4rem",
         elementGapMd: "3rem",
       },
