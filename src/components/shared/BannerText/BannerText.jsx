@@ -5,7 +5,7 @@ const BannerText = ({ textObj }) => {
   const { heading, description } = textObj;
 
   return (
-    <div className="static md:absolute md:top-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 md:z-30 bg-black md:bg-[rgba(0,0,0,0.8)] p-8 md:rounded-default text-white text-center w-full md:w-max backdrop-blur-sm">
+    <div className="static md:absolute md:top-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 md:z-40 bg-black md:bg-[rgba(0,0,0,0.8)] p-8 md:rounded-default text-white text-center w-full md:w-max">
       <h1 className="font-semibold text-3xl md:text-5xl text-center mb-4 tracking-tight">
         {heading}
       </h1>

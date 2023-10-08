@@ -22,9 +22,9 @@ const Navbar = ({ companyName, navigationOptions }) => {
       <Brandname companyName={companyName} />
 
       {/* desktop nav */}
-      <div className="hidden lg:flex items-center gap-[2rem]">
+      <div className="hidden lg:flex items-center gap-[1.5rem]">
         <DesktopNavigation navigationOptions={navigationOptions} />
-        <LinkBtn url="/register" text="Sign Up" />
+        <LinkBtn url="/register" text="Register Account" />
       </div>
 
       {/* mobile nav btn */}

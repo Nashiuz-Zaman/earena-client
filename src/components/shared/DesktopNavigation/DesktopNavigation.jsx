@@ -12,7 +12,7 @@ const DesktopNavigation = ({ navigationOptions }) => {
           return (
             <li key={option.id}>
               <NavLink
-                className="leading-[normal] hover:text-primary transition-all duration-300"
+                className="leading-[normal] text-white font-medium hover:text-primaryLight transition-all duration-300"
                 to={option.url}
               >
                 {option.text}

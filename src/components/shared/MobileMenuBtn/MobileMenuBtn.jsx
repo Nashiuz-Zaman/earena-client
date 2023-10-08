@@ -7,7 +7,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 const MobileMenuBtn = ({ openNavFunction }) => {
   return (
     <button className="lg:hidden" onClick={openNavFunction}>
-      <AiOutlineMenu className="text-3xl"></AiOutlineMenu>
+      <AiOutlineMenu className="text-3xl text-white"></AiOutlineMenu>
     </button>
   );
 };

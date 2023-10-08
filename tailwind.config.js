@@ -7,6 +7,9 @@ export default {
         "2xsm": "360px",
         xsm: "480px",
       },
+      margin: {
+        sectionLg: "9rem",
+      },
       colors: {
         primary: "#b91c1c",
         primaryLight: "#c03333",
