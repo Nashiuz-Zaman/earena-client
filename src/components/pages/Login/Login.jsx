@@ -1,5 +1,12 @@
+// shared component imports
+import LoginForm from "../../shared/LoginForm/LoginForm";
+
 const Login = () => {
-  return <div>This is login</div>;
+  return (
+    <section className="mt-[15rem] mb-sectionGapMd">
+      <LoginForm />
+    </section>
+  );
 };
 
 export default Login;

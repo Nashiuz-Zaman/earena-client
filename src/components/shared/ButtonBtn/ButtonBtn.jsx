@@ -1,7 +1,7 @@
 // react imports
 import PropTypes from "prop-types";
 
-const LinkBtn = ({
+const ButtonBtn = ({
   text,
   onClickFunction,
   outlined = false,
@@ -21,11 +21,11 @@ const LinkBtn = ({
   );
 };
 
-LinkBtn.propTypes = {
+ButtonBtn.propTypes = {
   text: PropTypes.string.isRequired,
   onClickFunction: PropTypes.func.isRequired,
   outlined: PropTypes.bool,
   modifyClasses: PropTypes.string,
 };
 
-export default LinkBtn;
+export default ButtonBtn;

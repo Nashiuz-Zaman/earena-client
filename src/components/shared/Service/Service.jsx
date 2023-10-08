@@ -8,7 +8,7 @@ const Service = ({ serviceObj }) => {
     <div className="flex flex-col group">
       <div className="w-full aspect-video overflow-hidden">
         <img
-          className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
+          className="w-full h-full object-cover group-hover:scale-[1.075] transition-all duration-300"
           src={image}
           alt={`Photo for ${name}`}
         />
