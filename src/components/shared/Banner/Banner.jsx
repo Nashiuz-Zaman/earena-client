@@ -8,7 +8,7 @@ import { carouselImages } from "../../../data/carouselData";
 const textObj = {
   heading: (
     <>
-      Welcome to the Ultimate <br className="hidden md:inline" />{" "}
+      Welcome to the Ultimate <br className="hidden md:inline xl:hidden" />{" "}
       <span className="text-primary">eSports</span> Experience!
     </>
   ),

@@ -9,7 +9,7 @@ const BannerText = ({ textObj }) => {
       <h1 className="font-semibold text-3xl md:text-5xl text-center mb-4 tracking-tight">
         {heading}
       </h1>
-      <p className="leading-[1.5] text-sm mb-6">{description}</p>
+      <p className="leading-[1.5] text-sm xl:text-base mb-6">{description}</p>
       <div className="flex flex-col xsm:flex-row items-center justify-center gap-4">
         <LinkBtn text="Explore Services" hashed={true} />
         <LinkBtn outlined={true} text="Sign up - It's free!" url="/register" />
