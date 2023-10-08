@@ -21,8 +21,8 @@ const LoginForm = () => {
     setLoginInfo({ ...loginInfo, password: e.target.value });
   };
 
+  // common styles for input and label jsx elements
   const labelClasses = "block mb-2 text-sm";
-
   const inputClasses =
     "block w-full rounded-default border border-textLight py-2 px-2";
 
@@ -30,6 +30,7 @@ const LoginForm = () => {
   return (
     <div>
       <form className="w-full md:w-[20rem] mx-auto p-4">
+        {/* email field */}
         <div className="mb-4">
           <label className={labelClasses} htmlFor="email">
             Email
@@ -45,6 +46,7 @@ const LoginForm = () => {
           />
         </div>
 
+        {/* password field */}
         <div className="mb-10">
           <label className={labelClasses} htmlFor="password">
             Password
