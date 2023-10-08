@@ -8,5 +8,5 @@
 
 /* custom styles */
 .active {
-  @apply text-primaryLight;
+  @apply text-primaryLight font-bold;
 }

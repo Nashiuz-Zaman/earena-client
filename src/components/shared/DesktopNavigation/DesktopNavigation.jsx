@@ -6,13 +6,13 @@ import { NavLink } from "react-router-dom";
 
 const DesktopNavigation = ({ navigationOptions }) => {
   return (
-    <ul className="flex gap-[1.5rem]">
+    <ul className="flex gap-[1rem]">
       {navigationOptions &&
         navigationOptions.map((option) => {
           return (
             <li key={option.id}>
               <NavLink
-                className="leading-[normal] text-white font-medium hover:text-primaryLight transition-all duration-300"
+                className="leading-[normal] text-white font-medium hover:text-primaryLight transition-all duration-200"
                 to={option.url}
               >
                 {option.text}
