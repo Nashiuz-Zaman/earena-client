@@ -11,7 +11,7 @@ const BannerText = ({ textObj }) => {
       </h1>
       <p className="leading-[1.5] text-sm xl:text-base mb-6">{description}</p>
       <div className="flex flex-col xsm:flex-row items-center justify-center gap-4">
-        <LinkBtn text="Explore Services" hashed={true} />
+        <LinkBtn text="Explore Services" hashed={true} url="#our-services" />
         <LinkBtn outlined={true} text="Sign up - It's free!" url="/register" />
       </div>
     </div>

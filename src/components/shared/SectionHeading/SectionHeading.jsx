@@ -10,7 +10,7 @@ const SectionHeading = ({ text, modifyClasses = "" }) => {
 };
 
 SectionHeading.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.any.isRequired,
   modifyClasses: PropTypes.string,
 };
 
