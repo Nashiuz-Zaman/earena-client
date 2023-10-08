@@ -1,14 +1,23 @@
 // react-router imports
 import { Outlet } from "react-router-dom";
-import Header from "./../../shared/Header/Header";
 
-// component imports
+// shared component imports
+import Header from "./../../shared/Header/Header";
+import Footer from "../../shared/Footer/Footer";
+
+// data import
+import { socialmediaOptions } from "./../../../data/socialMediaData";
+import { navigationOptions } from "./../../../data/navigationOptions";
 
 const RootLayout = () => {
   return (
     <div className="font-poppins text-textPrimary">
-      <Header />
+      <Header navigationOptions={navigationOptions} />
       <Outlet />
+      <Footer
+        footerNavigationOptions={navigationOptions}
+        socialMediaOptions={socialmediaOptions}
+      />
     </div>
   );
 };

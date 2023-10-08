@@ -8,7 +8,7 @@ const FeaturedIn = ({ logos }) => {
         const { id, name, image } = logo;
 
         return (
-          <div className="w-[7rem] aspect-square" key={id}>
+          <div className="w-[5rem] lg:w-[6.5rem] aspect-square" key={id}>
             <img
               className="w-full h-full object-contain"
               src={image}

@@ -40,24 +40,32 @@ const Home = () => {
     </>
   );
 
-  // service section heading
+  // featured in section heading
   const featuredSectionHeading = (
     <>
       <span className="text-primary">Featured</span> In
     </>
   );
 
+  // featured in section description
+  const featuredSectionDescription =
+    "Explore the recognition and accolades we've received from top-tier tech magazines and websites, validating our expertise in the world of esports event management.";
+
+  // component starts here
   return (
     <div>
       {/* banner section */}
-      <section className="mb-sectionGapLg">
+      <section className="mb-sectionGapMd lg:mb-sectionGapLg">
         <OuterContainer>
           <Banner />
         </OuterContainer>
       </section>
 
       {/* services section */}
-      <section id="our-services" className="scroll-m-[10rem] mb-sectionGapLg">
+      <section
+        id="our-services"
+        className="scroll-m-[10rem] mb-sectionGapMd lg:mb-sectionGapLg"
+      >
         <InnerContainer>
           <SectionHeading
             modifyClasses="mb-elementGapSm"
@@ -72,7 +80,7 @@ const Home = () => {
       </section>
 
       {/* upcoming events section */}
-      <section className="mb-sectionGapLg">
+      <section className="mb-sectionGapMd lg:mb-sectionGapLg">
         <OuterContainer>
           <SectionHeading
             modifyClasses="mb-elementGapSm md:mb-0"
@@ -89,12 +97,16 @@ const Home = () => {
       </section>
 
       {/* featured in  */}
-      <section className="mb-sectionGapLg">
+      <section className="mb-sectionGapMd lg:mb-sectionGapLg">
         <SectionHeading
-          modifyClasses="mb-elementGapMd"
+          modifyClasses="mb-elementGapSm"
           text={featuredSectionHeading}
         />
         <InnerContainer>
+          <Description
+            text={featuredSectionDescription}
+            modifyClasses="lg:w-1/2 mx-auto mb-elementGapMd"
+          />
           <FeaturedIn logos={featuredData} />
         </InnerContainer>
       </section>

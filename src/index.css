@@ -12,6 +12,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.filter-white {
+  filter: invert(100%) sepia(1%) saturate(7497%) hue-rotate(259deg)
+    brightness(100%) contrast(103%);
+}
+
 .clip {
   clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
 }

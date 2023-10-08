@@ -8,10 +8,12 @@ export default {
         xsm: "480px",
       },
       margin: {
-        sectionGapLg: "9rem",
+        sectionGapLg: "11rem",
+        sectionGapMd: "9rem",
         elementGapSm: "1.4rem",
         elementGapMd: "3rem",
       },
+
       colors: {
         primary: "#b91c1c",
         primaryLight: "#c03333",
