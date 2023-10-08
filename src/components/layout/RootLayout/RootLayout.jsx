@@ -11,7 +11,7 @@ import { navigationOptions } from "./../../../data/navigationOptions";
 
 const RootLayout = () => {
   return (
-    <div className="font-poppins text-textPrimary">
+    <div className="font-poppins text-textPrimary flex flex-col min-h-screen">
       <Header navigationOptions={navigationOptions} />
       <Outlet />
       <Footer

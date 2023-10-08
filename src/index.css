@@ -9,7 +9,7 @@
 /* custom styles */
 
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
 }
 
 .filter-white {

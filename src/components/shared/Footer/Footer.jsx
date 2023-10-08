@@ -12,7 +12,7 @@ const year = new Date().getFullYear();
 
 const Footer = ({ footerNavigationOptions, socialMediaOptions }) => {
   return (
-    <footer className="bg-black pt-20 pb-10">
+    <footer className="bg-black pt-20 pb-10 mt-auto">
       <InnerContainer>
         <Brandname companyName="EArena" modifyClasses="w-max mx-auto mb-8" />
 
