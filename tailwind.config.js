@@ -9,6 +9,8 @@ export default {
       },
       margin: {
         sectionLg: "9rem",
+        elementGapSm: "1.4rem",
+        elementGapMd: "3rem",
       },
       colors: {
         primary: "#b91c1c",

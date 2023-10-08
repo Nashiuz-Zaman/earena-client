@@ -18,7 +18,7 @@ const LinkBtn = ({
         outlined
           ? "bg-transparent border border-white text-white hover:bg-[rgba(255,255,255,0.5)]"
           : "bg-primary border border-primary hover:border-primaryLight hover:bg-primaryLight text-white"
-      } block transition-all duration-300 rounded-full px-4 py-2 text-lg ${modifyClasses}`}
+      } block transition-all duration-300 rounded-full px-5 py-2 text-lg ${modifyClasses}`}
       to={url}
     >
       {text}
@@ -31,7 +31,7 @@ const LinkBtn = ({
         outlined
           ? "bg-transparent border border-white text-white hover:bg-[rgba(255,255,255,0.5)]"
           : "bg-primary border border-primary hover:border-primaryLight hover:bg-primaryLight text-white"
-      } block transition-all duration-300 rounded-full px-4 py-2 text-lg ${modifyClasses}`}
+      } block transition-all duration-300 rounded-full px-5 py-2 text-lg ${modifyClasses}`}
       to={url}
     >
       {text}
