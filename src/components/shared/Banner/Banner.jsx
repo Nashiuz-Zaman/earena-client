@@ -8,14 +8,15 @@ import { carouselImages } from "../../../data/carouselData";
 const textObj = {
   heading: (
     <>
-      Welcome to the Ultimate <br />{" "}
+      Welcome to the Ultimate <br className="hidden md:inline" />{" "}
       <span className="text-primary">eSports</span> Experience!
     </>
   ),
   description: (
     <>
       Elevate your eSports events with our expert event management.
-      <br /> We turn your dreams into unforgettable experiences.
+      <br className="hidden sm:inline" /> We turn your dreams into unforgettable
+      experiences.
     </>
   ),
 };

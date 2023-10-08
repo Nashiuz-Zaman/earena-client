@@ -8,7 +8,7 @@ const Carousel = ({ images = [] }) => {
   const { leftSlide, curSlide, rightSlide } = useCarousel(images, 4000);
 
   return (
-    <div className="w-full aspect-[16/7] relative overflow-hidden z-10">
+    <div className="w-full aspect-[16/16] 2xsm:aspect-[16/12] xsm:aspect-[16/10] md:aspect-[16/11] lg:aspect-[16/6.8] relative overflow-hidden z-10">
       {images.map((image) => {
         return (
           <div

@@ -4,15 +4,15 @@ import PropTypes from "prop-types";
 // icon
 import { AiOutlineMenu } from "react-icons/ai";
 
-const MobileMenuBtn = ({ clickHandler }) => {
+const MobileMenuBtn = ({ openNavFunction }) => {
   return (
-    <button className="lg:hidden" onClick={clickHandler}>
-      <AiOutlineMenu className="text-2xl md:text-3xl text-primary"></AiOutlineMenu>
+    <button className="lg:hidden" onClick={openNavFunction}>
+      <AiOutlineMenu className="text-3xl"></AiOutlineMenu>
     </button>
   );
 };
 
 MobileMenuBtn.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
+  openNavFunction: PropTypes.func.isRequired,
 };
 export default MobileMenuBtn;

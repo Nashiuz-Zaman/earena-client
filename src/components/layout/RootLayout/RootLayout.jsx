@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
   return (
-    <div className="font-poppins">
+    <div className="font-poppins text-textPrimary">
       <Outlet />
     </div>
   );

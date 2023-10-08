@@ -3,9 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        "2xsm": "360px",
+        xsm: "480px",
+      },
       colors: {
         primary: "#b91c1c",
         primaryLight: "#c03333",
+        textPrimary: "#1C1B1B",
+        textMediumLight: "#1c1b1bcc",
+        textLight: "#1c1b1b99",
       },
       fontFamily: {
         poppins: "'Poppins', sans-serif",
