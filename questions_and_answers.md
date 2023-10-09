@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: C
 
-<i>When checking if(num) the 0 , which is the first element of the array, it returns a falsy value thus false, so the count+=1 code is not executed for the first element, but since the other elements are truty values thus returns true, the code in the if block runs and since only 3 of them are truthy values out of 4, the count is added 3 times and returns 3 because the count started from 0.</i>
+<i>When checking if(num) the 0 , which is the first element of the array, it returns a falsy value thus false, so the count+=1 code is not executed for the first element, but since the other elements are truthy values, thus returns true, the code in the if block runs 3 times and since only 3 of them are truthy values out of 4, the count is added 3 times and returns 3 because the count started from 0.</i>
 
 </p>
 </details>
