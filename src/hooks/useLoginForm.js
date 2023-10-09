@@ -3,6 +3,8 @@ import { useState } from "react";
 
 // react router dom imports
 import { useNavigate } from "react-router-dom";
+//
+import { useLocation } from "react-router-dom";
 
 // custom hook
 import useAuthContext from "./useAuthContext";
@@ -10,6 +12,7 @@ import useAuthContext from "./useAuthContext";
 const useLoginForm = () => {
   const { logIn, setAppLoading } = useAuthContext();
   const navigate = useNavigate();
+  const { state } = useLocation();
 
   // states of the form input boxes
   const [loginInfo, setLoginInfo] = useState({
@@ -33,8 +36,11 @@ const useLoginForm = () => {
 
     logIn(loginInfo.email, loginInfo.password)
       .then(() => {
-        console.log("successful login");
-        navigate("/");
+        if (state) {
+          navigate(state);
+        } else {
+          navigate("/");
+        }
       })
       .catch((error) => {
         console.log(error.message);
