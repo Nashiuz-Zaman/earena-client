@@ -15,7 +15,10 @@ const RegistrationForm = () => {
     getPassword,
     getPhotoUrl,
     handleSubmit,
+    formSubmitted,
   } = useRegistrationForm();
+
+  console.log(registrationInfo.errors);
 
   // common styles for input and label jsx elements
   const labelClasses = "block mb-2 text-sm";
@@ -74,7 +77,7 @@ const RegistrationForm = () => {
         </div>
 
         {/* password field */}
-        <div className="mb-10">
+        <div>
           <label className={labelClasses} htmlFor="password">
             Password
           </label>
@@ -89,7 +92,19 @@ const RegistrationForm = () => {
           />
         </div>
 
-        <ButtonBtn text="Register" modifyClasses="w-full block mb-4" />
+        {registrationInfo.errors.length > 0 && formSubmitted && (
+          <div className="space-y-4 mt-4">
+            {registrationInfo.errors.map((error) => {
+              return (
+                <p key={error} className="text-sm text-primaryLight">
+                  *{error}
+                </p>
+              );
+            })}
+          </div>
+        )}
+
+        <ButtonBtn text="Register" modifyClasses="w-full block mt-10 mb-4" />
         <p className="text-sm text-center">
           Already have an account?{" "}
           <Link className="text-primary font-semibold" to={"/login"}>

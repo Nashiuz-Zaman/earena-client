@@ -25,7 +25,6 @@ const Navbar = ({ companyName, navigationOptions }) => {
   // extract user information from auth context
   const { user, logOut } = useAuthContext();
 
-  console.log(user);
   // return jsx
   return (
     <nav className="flex items-center justify-between py-6">
