@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const DesktopNavigation = ({ navigationOptions }) => {
   return (
-    <ul className="flex gap-[1rem]">
+    <ul className="flex gap-4">
       {navigationOptions &&
         navigationOptions.map((option) => {
           return (
