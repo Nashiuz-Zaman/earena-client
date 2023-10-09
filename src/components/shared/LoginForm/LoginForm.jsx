@@ -8,7 +8,14 @@ import ButtonBtn from "./../ButtonBtn/ButtonBtn";
 import useLoginForm from "../../../hooks/useLoginForm";
 
 const LoginForm = () => {
-  const { loginInfo, getEmail, getPassword, handleSubmit } = useLoginForm();
+  const {
+    loginInfo,
+    getEmail,
+    getPassword,
+    handleSubmit,
+    error,
+    handleGoogleSignIn,
+  } = useLoginForm();
 
   // common styles for input and label jsx elements
   const labelClasses = "block mb-2 text-sm";
@@ -58,6 +65,11 @@ const LoginForm = () => {
           </Link>
         </p>
       </form>
+      <ButtonBtn
+        onClickFunction={handleGoogleSignIn}
+        text="Sign In With Google"
+        modifyClasses="mx-auto mt-6 border border-primary bg-white !text-primary hover:bg-white"
+      />
     </div>
   );
 };

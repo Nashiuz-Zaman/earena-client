@@ -11,18 +11,26 @@ import {
   signInWithEmailAndPassword,
   signOut,
   updateProfile,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "firebase/auth";
 
 export const AuthContext = createContext();
 
 // create auth instance
 const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   // set up user state
   const [user, setUser] = useState(null);
   // declare app state
   const [appLoading, setAppLoading] = useState(true);
+
+  // login with google function
+  const googleSignIn = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
 
   // user creation with email and password
   const createUser = (email, password) => {
@@ -68,8 +76,6 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  console.log(appLoading);
-
   // pass all the necessary things to the context provider through an object
   const authObj = {
     user,
@@ -81,6 +87,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     logIn,
     updateUser,
+    googleSignIn,
   };
 
   return (

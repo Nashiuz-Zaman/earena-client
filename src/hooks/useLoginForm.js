@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 import useAuthContext from "./useAuthContext";
 
 const useLoginForm = () => {
-  const { logIn, setAppLoading } = useAuthContext();
+  const { logIn, setAppLoading, googleSignIn } = useAuthContext();
   const navigate = useNavigate();
   const { state } = useLocation();
 
@@ -18,8 +18,9 @@ const useLoginForm = () => {
   const [loginInfo, setLoginInfo] = useState({
     email: "",
     password: "",
-    errors: [],
   });
+
+  const [error, setError] = useState("");
 
   // on change run this function for email field
   const getEmail = (e) => {
@@ -29,6 +30,18 @@ const useLoginForm = () => {
   // on change run this function for password field
   const getPassword = (e) => {
     setLoginInfo({ ...loginInfo, password: e.target.value });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then(() => {
+        if (state) {
+          navigate(state);
+        } else {
+          navigate("/");
+        }
+      })
+      .catch((errors) => console.log(errors));
   };
 
   const handleSubmit = (e) => {
@@ -42,13 +55,20 @@ const useLoginForm = () => {
           navigate("/");
         }
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch((curError) => {
+        setError(curError.message);
         setAppLoading(false);
       });
   };
 
-  return { loginInfo, getEmail, getPassword, handleSubmit };
+  return {
+    loginInfo,
+    getEmail,
+    getPassword,
+    handleSubmit,
+    error,
+    handleGoogleSignIn,
+  };
 };
 
 export default useLoginForm;
