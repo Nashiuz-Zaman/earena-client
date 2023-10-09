@@ -1,45 +1,30 @@
-// react import
-import { useState } from "react";
-
 // react router import
 import { Link } from "react-router-dom";
+
+// custom hooks import
+import useRegistrationForm from "../../../hooks/useRegistrationForm";
 
 // shared component imports
 import ButtonBtn from "./../ButtonBtn/ButtonBtn";
 
 const RegistrationForm = () => {
-  // states of the form input boxes
-  const [registrationInfo, setRegistrationInfo] = useState({
-    email: "",
-    password: "",
-    username: "",
-  });
-
-  // on change run this function for username field
-
-  const getUsername = (e) => {
-    setRegistrationInfo({ ...registrationInfo, username: e.target.value });
-  };
-
-  // on change run this function for email field
-  const getEmail = (e) => {
-    setRegistrationInfo({ ...registrationInfo, email: e.target.value });
-  };
-
-  // on change run this function for password field
-  const getPassword = (e) => {
-    setRegistrationInfo({ ...registrationInfo, password: e.target.value });
-  };
+  const {
+    registrationInfo,
+    getUsername,
+    getEmail,
+    getPassword,
+    getPhotoUrl,
+    handleSubmit,
+  } = useRegistrationForm();
 
   // common styles for input and label jsx elements
   const labelClasses = "block mb-2 text-sm";
   const inputClasses =
     "block w-full rounded-default border border-textLight py-2 px-2";
 
-  console.log(registrationInfo);
   return (
     <div>
-      <form className="w-full md:w-[20rem] mx-auto p-4">
+      <form onSubmit={handleSubmit} className="w-full md:w-[20rem] mx-auto p-4">
         {/* username field */}
         <div className="mb-4">
           <label className={labelClasses} htmlFor="username">
@@ -52,6 +37,22 @@ const RegistrationForm = () => {
             id="username"
             value={registrationInfo.username}
             placeholder="username"
+            required
+          />
+        </div>
+
+        {/* photo url field */}
+        <div className="mb-4">
+          <label className={labelClasses} htmlFor="photoUrl">
+            Photo URL
+          </label>
+          <input
+            className={inputClasses}
+            onChange={getPhotoUrl}
+            type="text"
+            id="photoUrl"
+            value={registrationInfo.photoUrl}
+            placeholder="photo url"
             required
           />
         </div>
