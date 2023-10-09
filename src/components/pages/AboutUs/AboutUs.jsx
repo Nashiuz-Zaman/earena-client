@@ -9,6 +9,7 @@ const AboutUs = () => {
   return (
     <div className="my-sectionGapLg">
       <InnerContainer>
+        {/* page heading */}
         <SectionHeading
           modifyClasses="mb-6"
           text={
@@ -18,12 +19,14 @@ const AboutUs = () => {
           }
         />
 
+        {/* team photo */}
         <img
           className="w-full lg:w-3/4 mx-auto mb-12"
           src="https://i.ibb.co/xqKdztW/team.webp"
           alt="EArena Team Members"
         />
 
+        {/* who we are heading */}
         <SectionHeading
           modifyClasses="mb-5"
           text={
@@ -33,6 +36,7 @@ const AboutUs = () => {
           }
         />
 
+        {/* description */}
         <div className="space-y-4 w-full lg:w-3/4 mx-auto">
           {aboutUsDescription.map((text, i) => {
             return <p key={i}>{text.text}</p>;

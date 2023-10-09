@@ -13,6 +13,7 @@ import AboutUs from "../components/pages/AboutUs/AboutUs";
 
 // route component import
 import PrivateRoute from "../components/pages/Route/PrivateRoute/PrivateRoute";
+import LiveSupport from "../components/pages/LiveSupport/LiveSupport";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AboutUs />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/support",
+        element: (
+          <PrivateRoute>
+            <LiveSupport />
           </PrivateRoute>
         ),
       },
