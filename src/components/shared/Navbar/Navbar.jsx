@@ -11,7 +11,7 @@ import LinkBtn from "../LinkBtn/LinkBtn";
 import MobileMenuBtn from "../MobileMenuBtn/MobileMenuBtn";
 import MobileNavigation from "../MobileNavigation/MobileNavigation";
 import ButtonBtn from "../ButtonBtn/ButtonBtn";
-import UserImage from "../UserImage/UserImage";
+import UsernameWithImage from "../UsernameWithImage/UsernameWithImage";
 
 // hooks
 import useMobileNavigation from "./../../../hooks/useMobileNavigation";
@@ -25,6 +25,7 @@ const Navbar = ({ companyName, navigationOptions }) => {
   // extract user information from auth context
   const { user, logOut } = useAuthContext();
 
+  console.log(user);
   // return jsx
   return (
     <nav className="flex items-center justify-between py-6">
@@ -32,7 +33,7 @@ const Navbar = ({ companyName, navigationOptions }) => {
       <Brandname companyName={companyName} />
 
       {/* desktop nav */}
-      <div className="hidden lg:flex items-center gap-8">
+      <div className="hidden lg:flex items-center gap-10">
         <DesktopNavigation navigationOptions={navigationOptions} />
 
         {/* if there is no user show this login and register button */}
@@ -48,10 +49,13 @@ const Navbar = ({ companyName, navigationOptions }) => {
           </div>
         )}
 
-        <UserImage />
-
         {/* if there is user show logout button and user profile image */}
-        {user && <ButtonBtn onClickFunction={logOut} text="Log Out" />}
+        {user && (
+          <div className="flex items-center gap-4">
+            <UsernameWithImage />
+            <ButtonBtn onClickFunction={logOut} text="Log Out" />
+          </div>
+        )}
       </div>
 
       {/* mobile nav btn */}
