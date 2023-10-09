@@ -23,7 +23,7 @@ const ButtonBtn = ({
 
 ButtonBtn.propTypes = {
   text: PropTypes.string.isRequired,
-  onClickFunction: PropTypes.func.isRequired,
+  onClickFunction: PropTypes.func,
   outlined: PropTypes.bool,
   modifyClasses: PropTypes.string,
 };
