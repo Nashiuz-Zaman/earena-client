@@ -1,35 +1,23 @@
-// react import
-import { useState } from "react";
-
 // react router import
 import { Link } from "react-router-dom";
 
 // shared component imports
 import ButtonBtn from "./../ButtonBtn/ButtonBtn";
 
+// custom hooks
+import useLoginForm from "../../../hooks/useLoginForm";
+
 const LoginForm = () => {
-  // states of the form input boxes
-  const [loginInfo, setLoginInfo] = useState({ email: "", password: "" });
-
-  // on change run this function for email field
-  const getEmail = (e) => {
-    setLoginInfo({ ...loginInfo, email: e.target.value });
-  };
-
-  // on change run this function for password field
-  const getPassword = (e) => {
-    setLoginInfo({ ...loginInfo, password: e.target.value });
-  };
+  const { loginInfo, getEmail, getPassword, handleSubmit } = useLoginForm();
 
   // common styles for input and label jsx elements
   const labelClasses = "block mb-2 text-sm";
   const inputClasses =
     "block w-full rounded-default border border-textLight py-2 px-2";
 
-  console.log(loginInfo);
   return (
     <div>
-      <form className="w-full md:w-[20rem] mx-auto p-4">
+      <form onSubmit={handleSubmit} className="w-full md:w-[20rem] mx-auto p-4">
         {/* email field */}
         <div className="mb-4">
           <label className={labelClasses} htmlFor="email">

@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import useAuthContext from "./useAuthContext";
 
 const useRegistrationForm = () => {
-  const { createUser } = useAuthContext();
+  const { createUser, updateUser } = useAuthContext();
   const navigate = useNavigate();
 
   // states of the form input boxes
@@ -17,6 +17,7 @@ const useRegistrationForm = () => {
     password: "",
     username: "",
     photoUrl: "",
+    errors: [],
   });
 
   // on change run this function for username field
@@ -44,7 +45,11 @@ const useRegistrationForm = () => {
 
     createUser(registrationInfo.email, registrationInfo.password)
       .then(() => {
-        navigate("/");
+        updateUser(registrationInfo.username, registrationInfo.photoUrl)
+          .then(() => {
+            navigate("/");
+          })
+          .catch((error) => console.log(error));
       })
       .catch((error) => {
         console.log(error);
