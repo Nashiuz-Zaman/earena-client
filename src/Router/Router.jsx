@@ -10,6 +10,7 @@ import Login from "../components/pages/Login/Login";
 import Registration from "../components/pages/Registration/Registration";
 import ServiceDetail from "../components/pages/ServiceDetail/ServiceDetail";
 import AboutUs from "../components/pages/AboutUs/AboutUs";
+import ErrorPage from "../components/pages/ErrorPage/ErrorPage";
 
 // route component import
 import PrivateRoute from "../components/pages/Route/PrivateRoute/PrivateRoute";
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
