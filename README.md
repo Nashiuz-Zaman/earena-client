@@ -1,4 +1,16 @@
-# Feature of my site
+# Project EArena
+
+Live Link: https://earena-22aa4.web.app/
+
+This is a sample Gaming Event Management website which only contains the client side development and registration/login authentication using Firebase Auth.
+
+# Language/Libraries/Frameworks
+
+- React JS
+- Tailwind CSS
+- Firebase Authentication
+
+# Features
 
 1. The website is event management website and on the homepage, the user can see what services this company provides.
 
